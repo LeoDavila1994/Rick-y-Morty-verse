@@ -7,9 +7,18 @@ const Location = ({ name, type, dimention, population }) => {
                 <h2>{name}</h2>
             </div>
             <div className='info'>
-                <p><strong>Type: </strong> {type}.</p>
-                <p><strong>Dimention: </strong> {dimention}.</p>
-                <p><strong>Population: </strong> {population}.</p>
+                <div>
+                    <p><strong>Type: </strong></p>
+                    <p>" {type} "</p>
+                </div>
+                <div>
+                    <p><strong>Dimention: </strong></p>
+                    <p>" {dimention} "</p>
+                </div>
+                <div>
+                    <p><strong>Population: </strong></p>
+                    <p>" {population} "</p>
+                </div>
             </div>
         </div>
     );

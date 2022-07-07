@@ -36,8 +36,7 @@ header{
 
 .location-container{
   padding: 2rem;
-  background-color: #3f0d68;
-  border-radius: 6px;
+  background-color: #690f2d;
   font-family: 'Quicksand', sans-serif;
   border-top: 1px solid whitesmoke;
   border-bottom: 1px solid whitesmoke;
@@ -52,6 +51,7 @@ header{
 
 .info{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: whitesmoke;
+  text-align: center;
 }
