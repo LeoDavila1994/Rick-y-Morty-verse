@@ -1,9 +1,8 @@
-import React from 'react';
 
-const Residents = () => {
+const Residents = ( {  } ) => {
+
     return (
-        <div>
-            
+        <div className='residents-container'>
         </div>
     );
 };

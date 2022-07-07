@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ResidentInfo = () => {
+const ResidentInfo = ( {} ) => {
+
     return (
-        <div>
-            
+        <div className='card'>
         </div>
     );
 };

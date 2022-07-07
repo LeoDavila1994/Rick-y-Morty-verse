@@ -9,15 +9,15 @@ const Location = ({ name, type, dimention, population }) => {
             <div className='info'>
                 <div>
                     <p><strong>Type: </strong></p>
-                    <p>" {type} "</p>
+                    <p>{type}</p>
                 </div>
                 <div>
                     <p><strong>Dimention: </strong></p>
-                    <p>" {dimention} "</p>
+                    <p>{dimention}</p>
                 </div>
                 <div>
                     <p><strong>Population: </strong></p>
-                    <p>" {population} "</p>
+                    <p>{population}</p>
                 </div>
             </div>
         </div>
