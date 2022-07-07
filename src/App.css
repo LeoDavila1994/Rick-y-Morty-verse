@@ -39,7 +39,8 @@ header{
   background-color: #3f0d68;
   border-radius: 6px;
   font-family: 'Quicksand', sans-serif;
-  border: 1px solid whitesmoke;
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
 }
 
 .title{
