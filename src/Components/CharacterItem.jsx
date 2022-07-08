@@ -12,8 +12,6 @@ const CharacterItem = ( { character } ) => {
             .then(res => setCharCard(res.data))
     },[]);
 
-    console.log(charCard);
-
     return (
         <div className='card'>
             <div className='img-cont'>
@@ -21,8 +19,7 @@ const CharacterItem = ( { character } ) => {
             </div>
             <div className='card-info'>
                 <p><strong>Name:</strong> {charCard.name}.</p>
-                <p><strong>Status:</strong> <div className='status'><Status charStatus={charCard.status}/>
-                </div>{charCard.status}.</p>
+                <div><strong>Status:</strong> <div className='status'><Status charStatus={charCard.status}/></div>{charCard.status}.</div>
                 <p><strong>Origin:</strong> {charCard.origin?.name}.</p>
                 <p><strong>Episodes:</strong> {charCard.episode?.length}.</p>
             </div>
