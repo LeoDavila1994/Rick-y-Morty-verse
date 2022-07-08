@@ -1,8 +1,13 @@
+import CharacterItem from "./CharacterItem";
 
-const Residents = ( {  } ) => {
+
+const Residents = ({ locations }) => {
 
     return (
-        <div className='residents-container'>
+        <div className="container">
+            {locations?.map(character => (
+                <CharacterItem character={character} key={character} />
+            ))}
         </div>
     );
 };

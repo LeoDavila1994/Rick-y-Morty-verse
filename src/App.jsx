@@ -4,7 +4,9 @@ import { useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Location from './Components/Location';
-import Residents from "./Components/Residents";
+import Logo from './Logo';
+import Residents from "./Components/Residents"
+
 
 function App() {
 
@@ -17,15 +19,19 @@ function App() {
 
   },[]);
 
-  console.log(locations.residents)
+  const [ onInput, setOnInput ] = useState("");
 
+    const searchDim = () => {
+        axios.get(`https://rickandmortyapi.com/api/location/${onInput}`)
+            .then(res => setLocations(res.data))
+    }
 
   return (
     <>
-      <Header />
-      <div className='logo'></div>
+      <Header onInput={onInput} functimp={setOnInput} searcher={searchDim}/>
+      <Logo />
       <Location name={locations.name} type={locations.type} dimention={locations.dimension} population={locations.residents?.length}/>
-      <Residents character={locations.residents?.[0]}/>
+      <Residents locations={locations.residents}/>
     </>
   )
 }
