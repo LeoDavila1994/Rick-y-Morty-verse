@@ -1,11 +1,12 @@
 import React from 'react';
+import Input from './Input';
 
 
 const Header = ( {onInput, functimp, searcher} ) => {
 
     return (
         <header>
-            <div className='header'><input type="text" value={onInput} onChange={e => functimp(e.target.value)}/><button onClick={() => searcher()}><i className="fa-solid fa-magnifying-glass"></i></button></div>
+            <div className='header'><Input onInput={onInput} functimp={functimp} searcher={searcher}/></div>
         </header>
     );
 };
