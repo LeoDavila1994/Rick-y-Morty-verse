@@ -19,7 +19,7 @@ function App() {
 
   },[]);
 
-  const [ onInput, setOnInput ] = useState("");
+  const [ onInput, setOnInput ] = useState("Choose a dimension between 1 - 126");
 
     const searchDim = () => {
 
