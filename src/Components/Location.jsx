@@ -2,8 +2,6 @@ import React from 'react';
 
 const Location = ({ name, type, dimention, population }) => {
 
-    console.log(population)
-
     if (population === 0) {
         return (
             <>
@@ -21,6 +19,7 @@ const Location = ({ name, type, dimention, population }) => {
                     <div className='war-bord'>
                         <h2>Warning</h2>
                         <p>Dimension without population to search in another dimension reload the page or in the search engine navigate among the 126 existing dimensions</p>
+                        <div className='morty'></div>
                     </div>
                 </div>
             </>
