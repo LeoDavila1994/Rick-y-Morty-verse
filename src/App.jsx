@@ -22,6 +22,9 @@ function App() {
   const [ onInput, setOnInput ] = useState("");
 
     const searchDim = () => {
+
+
+
         axios.get(`https://rickandmortyapi.com/api/location/${onInput}`)
             .then(res => setLocations(res.data))
     }
