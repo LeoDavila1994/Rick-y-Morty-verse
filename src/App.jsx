@@ -19,7 +19,7 @@ function App() {
 
   },[]);
 
-  const [ onInput, setOnInput ] = useState("Type between 1 - 126");
+  const [ onInput, setOnInput ] = useState("");
 
     const searchDim = () => {
 
