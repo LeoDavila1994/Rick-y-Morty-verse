@@ -2,20 +2,53 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-body{
+body {
   background-color: #090909;
 }
 
-header{
+.loading-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.load-screen {
+  color: white;
+  background-color: #528d2a;
+  width: 50%;
+  margin: auto;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0px 5px 30px rgb(17, 197, 221);
+}
+
+.morty-reload {
+  background-image: url("./images/morty.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 300px;
+  margin-top: 5rem;
+}
+
+header {
   width: 100%;
   height: 13rem;
 }
 
-.header{
+.header {
   width: 100%;
   height: 100%;
   background-image: url("https://images6.alphacoders.com/909/thumb-1920-909641.png");
@@ -28,7 +61,7 @@ header{
   padding: 1rem;
 }
 
-input{
+input {
   outline: none;
   border: 0;
   width: 80%;
@@ -36,7 +69,7 @@ input{
   text-align: center;
 }
 
-.input-btn{
+.input-btn {
   background-color: #c70f65;
   border: 0;
   color: whitesmoke;
@@ -44,7 +77,7 @@ input{
   width: 2rem;
 }
 
-.logo{
+.logo {
   width: 100%;
   height: 10rem;
   background-image: url("./images/RyM.png");
@@ -53,25 +86,25 @@ input{
   background-size: contain;
 }
 
-.logo img{
+.logo img {
   width: 100%;
 }
 
-.location-container{
+.location-container {
   background-color: #c70f65;
   padding: 1rem;
   display: flex;
   flex-direction: column;
 }
 
-.warning{
+.warning {
   background-color: #c70f65;
   padding: 2rem;
   display: flex;
   justify-content: center;
 }
 
-.war-bord{
+.war-bord {
   border: 2px solid rgb(255, 202, 103);
   color: rgb(255, 202, 103);
   text-align: center;
@@ -83,7 +116,7 @@ input{
   align-items: center;
 }
 
-.morty{
+.morty {
   background-image: url("./images/morty.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -92,24 +125,24 @@ input{
   height: 150px;
 }
 
-h2{
+h2 {
   margin: 0;
 }
 
-.title{
+.title {
   text-align: center;
   color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
-.info{
+.info {
   display: flex;
   justify-content: space-evenly;
   color: whitesmoke;
   text-align: center;
 }
 
-.container{
+.container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -119,16 +152,16 @@ h2{
   padding: 3rem;
 }
 
-#checked{
+#checked {
   display: none;
 }
 
-#checked:checked ~ .modal{
+#checked:checked~.modal {
   opacity: 1;
   visibility: visible;
 }
 
-.modal{
+.modal {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -143,7 +176,7 @@ h2{
   visibility: hidden;
 }
 
-.modal-inf{
+.modal-inf {
   width: 400px;
   height: 400px;
   margin: 2rem;
@@ -153,14 +186,14 @@ h2{
   border-radius: 10px;
 }
 
-.cross-cont{
+.cross-cont {
   width: 100%;
   height: 25px;
   display: flex;
   justify-content: flex-end;
 }
 
-.to-close{
+.to-close {
   width: 30px;
   height: 30px;
   display: flex;
@@ -173,12 +206,12 @@ h2{
   cursor: pointer;
 }
 
-.card{
+.card {
   color: #c70f65;
   text-align: center;
   background-color: whitesmoke;
   width: 230px;
-  border-radius:10px;
+  border-radius: 10px;
   border: 2px solid #c70f65;
   padding-bottom: 0.1rem;
   box-shadow: 0px 7px 30px;
@@ -186,38 +219,38 @@ h2{
   cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
   color: #24caae;
-  border: 2px solid  #24caae;
+  border: 2px solid #24caae;
 }
 
-.card-info{
+.card-info {
   padding: 1rem;
 }
 
-.status{
+.status {
   display: inline-block;
   margin: 0 5px;
 }
 
-.img-cont{
+.img-cont {
   width: 100%;
 }
 
-.img-cont img{
+.img-cont img {
   width: 100%;
 }
 
-@media (min-width: 577px){
-  input{
+@media (min-width: 577px) {
+  input {
     outline: none;
     border: 0;
     width: 436px;
     height: 1.5rem;
   }
 
-  .location-container{
-    background-color:#c70f65;
+  .location-container {
+    background-color: #c70f65;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -228,7 +261,7 @@ h2{
     border-radius: 5px 5px 0px 0px;
   }
 
-  .warning{
+  .warning {
     background-color: #c70f65;
     padding: 2rem;
     width: 576px;

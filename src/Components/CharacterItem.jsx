@@ -15,7 +15,7 @@ const CharacterItem = ({ character }) => {
     return (
         <>
             <input type="checkbox" id="checked"/>
-            <label className='card' for="checked">
+            <label className='card' htmlFor="checked">
                 <div className='img-cont'>
                     <img src={charCard.image} alt="" />
                 </div>
@@ -29,7 +29,7 @@ const CharacterItem = ({ character }) => {
             <div className='modal'>
                 <div className='modal-inf'>
                     <div className='cross-cont'>
-                        <label for="checked" className='to-close'><i class="fa-solid fa-xmark"></i></label>
+                        <label htmlFor="checked" className='to-close'><i className="fa-solid fa-xmark"></i></label>
                     </div>
                 </div>
             </div>
