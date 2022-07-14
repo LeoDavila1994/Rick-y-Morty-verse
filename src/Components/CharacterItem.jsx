@@ -12,11 +12,9 @@ const CharacterItem = ({ character }) => {
             .then(res => setCharCard(res.data))
     }, []);
 
-    console.log(charCard);
-
     return (
         <>
-            <input type="checkbox" id="check"/>
+            <input type="checkbox" id="check" className='inp-modal' />
             <label className='card' htmlFor="check">
                 <div className='img-cont'>
                     <img src={charCard.image} alt="" />
@@ -29,13 +27,15 @@ const CharacterItem = ({ character }) => {
                 </div>
             </label>
             <div className='modal'>
-                <div className='modal-inf'>
-                    <div className='cross-cont'>
-                        <label htmlFor="check" className='to-close'><i className="fa-solid fa-xmark"></i></label>
+                <div className='modal-container'>
+                    <div className='info-modal'>
+                        <label className='x' htmlFor='check'><i className="fa-solid fa-xmark"></i></label>
+                        <div><img src={charCard.image} alt="" /></div>
+                        <div className='modal-txt'>
+                            <p><strong>Name:</strong> {charCard.name}.</p>
+                            <p><strong>Status:</strong><div className='status'><Status charStatus={charCard.status} /></div>{charCard.status}.</p>
+                        </div>
                     </div>
-                    <div className='img-modal'><img src={charCard.image} alt="" /></div>
-                    <div><p><strong>Name:</strong> {charCard.name}.</p></div>
-                    <div><strong>Status:</strong> <div className='status'><Status charStatus={charCard.status} /></div>{charCard.status}.</div>
                 </div>
             </div>
         </>
@@ -43,3 +43,4 @@ const CharacterItem = ({ character }) => {
 };
 
 export default CharacterItem;
+

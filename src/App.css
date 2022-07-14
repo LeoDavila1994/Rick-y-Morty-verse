@@ -161,57 +161,6 @@ h2 {
   visibility: visible;
 }
 
-.modal {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: all 500ms ease;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.modal-inf {
-  width: 302px;
-  height: 420px;
-  margin: 2rem;
-  background-color: whitesmoke;
-  box-shadow: 0px 7px 30px #24caae;
-  border-radius: 10px;
-  background-color: rgb(45, 41, 77);
-  color:whitesmoke;
-  text-align: center;
-}
-
-.cross-cont {
-  width: 100%;
-  height: 30px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.img-modal{
-  text-align: center;
-}
-
-.to-close {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0px 10px 0px 0px;
-  background-color: #c70f65;
-  color: whitesmoke;
-  border: 0;
-  cursor: pointer;
-}
-
 .card {
   color: #c70f65;
   text-align: center;
@@ -245,6 +194,69 @@ h2 {
 
 .img-cont img {
   width: 100%;
+}
+
+.modal{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 500ms ease all;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-container{
+  width: 300px;
+  height: 450px;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px #24caae;
+  transition: 500ms ease all;
+  overflow: hidden;
+  background-color: #223858;
+}
+
+.modal-txt{
+  color: whitesmoke;
+  text-align: center;
+  padding: 1rem;
+}
+
+.x{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #c70f65;
+  color: whitesmoke;
+  border: 0;
+  border-radius: 0px 7px 0px 0px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  transition: 500ms ease all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.x:hover{
+  background-color: #24caae;
+}
+
+.inp-modal{
+  display: none;
+}
+
+#check:checked ~ .modal{
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (min-width: 577px) {
