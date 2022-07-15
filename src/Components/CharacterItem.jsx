@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Status from './Status';
 
-const CharacterItem = ({ character }) => {
+const CharacterItem = ({ character, toModal }) => {
 
     const [charCard, setCharCard] = useState({})
 
@@ -14,8 +14,7 @@ const CharacterItem = ({ character }) => {
 
     return (
         <>
-            <input type="checkbox" id="check" className='inp-modal' />
-            <label className='card' htmlFor="check">
+            <button type='button' className='card' onClick={() => toModal(charCard)}>
                 <div className='img-cont'>
                     <img src={charCard.image} alt="" />
                 </div>
@@ -25,19 +24,7 @@ const CharacterItem = ({ character }) => {
                     <p><strong>Origin:</strong> {charCard.origin?.name}.</p>
                     <p><strong>Episodes:</strong> {charCard.episode?.length}.</p>
                 </div>
-            </label>
-            <div className='modal'>
-                <div className='modal-container'>
-                    <div className='info-modal'>
-                        <label className='x' htmlFor='check'><i className="fa-solid fa-xmark"></i></label>
-                        <div><img src={charCard.image} alt="" /></div>
-                        <div className='modal-txt'>
-                            <p><strong>Name:</strong> {charCard.name}.</p>
-                            <p><strong>Status:</strong><div className='status'><Status charStatus={charCard.status} /></div>{charCard.status}.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </button>
         </>
     );
 };
