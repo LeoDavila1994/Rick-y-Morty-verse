@@ -14,7 +14,7 @@ const CharacterItem = ({ character, toModal }) => {
 
     return (
         <>
-            <button type='button' className='card' onClick={() => toModal(charCard)}>
+            <button type='buton' className='card' onClick={() => toModal(charCard)}>
                 <div className='img-cont'>
                     <img src={charCard.image} alt="" />
                 </div>

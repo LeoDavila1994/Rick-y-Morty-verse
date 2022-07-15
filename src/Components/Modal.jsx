@@ -1,3 +1,4 @@
+import Status from "./Status";
 
 const Modal = ({ modalChar }) => {
 
@@ -10,8 +11,8 @@ const Modal = ({ modalChar }) => {
                         <button className='x'><i className="fa-solid fa-xmark"></i></button>
                         <div><img src={modalChar.image} alt="" /></div>
                         <div className='modal-txt'>
-                            <p><strong>Name:{modalChar.name}</strong></p>
-                            <p><strong>Status:{modalChar.status}</strong></p>
+                            <p><strong>Name: {modalChar.name}</strong></p>
+                            <div><strong>Status:</strong> <div className='status'><Status charStatus={modalChar.status} /></div>{modalChar.status}.</div>
                         </div>
                     </div>
                 </div>
