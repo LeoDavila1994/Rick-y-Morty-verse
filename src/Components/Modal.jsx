@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import Status from "./Status";
 
-const Modal = ({ modalChar }) => {
+const Modal = ({ modalChar, deselectChar }) => {
 
 
     if (modalChar) {
@@ -8,7 +9,7 @@ const Modal = ({ modalChar }) => {
             <div className='modal'>
                 <div className='modal-container'>
                     <div className='info-modal'>
-                        <button className='x'><i className="fa-solid fa-xmark"></i></button>
+                        <button className='x' onClick={deselectChar}><i className="fa-solid fa-xmark"></i></button>
                         <div><img src={modalChar.image} alt="" /></div>
                         <div className='modal-txt'>
                             <p><strong>Name: {modalChar.name}</strong></p>

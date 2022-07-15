@@ -11,6 +11,10 @@ const Residents = ({ locations }) => {
         setModalChar(oneChar);
     }
 
+    const deselectChar = () => {
+        setModalChar(null)
+    }
+
     return (
         <>
             <div className="container">
@@ -18,7 +22,7 @@ const Residents = ({ locations }) => {
                     <CharacterItem character={character} key={character} toModal={toModal} />
                 ))}
             </div>
-            <Modal modalChar={modalChar}/>
+            <Modal modalChar={modalChar} deselectChar={deselectChar}/>
         </>
     );
 };
