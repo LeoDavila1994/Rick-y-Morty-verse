@@ -6,9 +6,9 @@ import Modal from "./Modal";
 const Residents = ({ locations }) => {
 
     const [page, setPage] = useState(1);
-    const lastIndex = page * 10;
-    const firstIndex = lastIndex - 10;
-    const lastPage = Math.ceil(locations?.length / 10);
+    const lastIndex = page * 15;
+    const firstIndex = lastIndex - 15;
+    const lastPage = Math.ceil(locations?.length / 15);
     const numberPage = [];
     for (let i = 1; i <= lastPage; i++) {
         numberPage.push(i);
