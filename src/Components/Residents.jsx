@@ -5,6 +5,16 @@ import Modal from "./Modal";
 
 const Residents = ({ locations }) => {
 
+    const [page, setPage] = useState(1);
+    const lastIndex = page * 10;
+    const firstIndex = lastIndex - 10;
+    const lastPage = Math.ceil(locations?.length / 10);
+    const numberPage = [];
+    for (let i = 1; i <= lastPage; i++) {
+        numberPage.push(i);
+    }
+
+    const characterPagination = locations?.slice(firstIndex, lastIndex);
     const [modalChar, setModalChar] = useState(null);
 
     const toModal = (oneChar) => {
@@ -18,11 +28,24 @@ const Residents = ({ locations }) => {
     return (
         <>
             <div className="container">
-                {locations?.map(character => (
+                {characterPagination?.map(character => (
                     <CharacterItem character={character} key={character} toModal={toModal} />
                 ))}
             </div>
-            <Modal modalChar={modalChar} deselectChar={deselectChar}/>
+            <Modal modalChar={modalChar} deselectChar={deselectChar} />
+            {numberPage.length <= 1 ? <div></div> : (
+                <>
+                    <div className="page-container">
+                        <button onClick={() => setPage(page - 1)} disabled={page === 1}><i className="fa-solid fa-caret-left"></i></button>
+                        {numberPage.map(number => (
+                            <div key={number}>
+                                <button onClick={() => setPage(number)}>{number}</button>
+                            </div>
+                        ))}
+                        <button onClick={() => setPage(page + 1)} disabled={page === lastPage}><i className="fa-solid fa-caret-right"></i></button>
+                    </div>
+                </>
+            )}
         </>
     );
 };
