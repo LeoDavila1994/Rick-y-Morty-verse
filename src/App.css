@@ -61,10 +61,30 @@ header {
   padding: 1rem;
 }
 
+.suggestions{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+  padding: 0.5rem;
+}
+
+.suggestions:hover{
+  cursor: pointer;
+  background-color: #24caae;
+}
+
+.input-suges{
+  position: relative;
+}
+
+.position-txt{
+  width: 100%;
+  position: absolute;
+}
+
 input {
   outline: none;
   border: 0;
-  width: 80%;
+  width: 100%;
   height: 1.5rem;
   text-align: center;
 }

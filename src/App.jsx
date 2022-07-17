@@ -20,13 +20,10 @@ function App() {
 
   }, []);
 
-  const [onInput, setOnInput] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  const searchDim = () => {
-
-    axios.get(`https://rickandmortyapi.com/api/location/${onInput}`)
-      .then(res => setLocations(res.data))
+  const searchDim = (location) => {
+    setLocations(location);
   }
 
   return (
@@ -39,7 +36,7 @@ function App() {
           </div>
         </div> : (
         <>
-          <Header onInput={onInput} functimp={setOnInput} searcher={searchDim} />
+          <Header searcher={searchDim} />
           <Logo />
           <Location name={locations.name} type={locations.type} dimention={locations.dimension} population={locations.residents?.length} />
           <Residents locations={locations.residents} />
